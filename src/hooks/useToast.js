@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
-import { createToast } from 'helpers/createToast';
-import { ToastFactory } from 'utils/toastFactory';
+import { createToast } from '@/helpers';
+import { ToastFactory } from '@/utils/toastFactory';
 
 export const useToast = (amountToasts = 3) => {
   const [instance] = useState(() => ToastFactory.getInstance());

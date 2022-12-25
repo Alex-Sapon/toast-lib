@@ -16,8 +16,8 @@ export const Container = styled.div`
   overflow: hidden;
   cursor: pointer;
   user-select: none;
-  animation: .6s ease 0s forwards normal ${props => props.animation},
-  .6s ease ${props => props.autoClose}ms forwards alternate-reverse ${props => props.animation};
+  animation: .6s ease 0s forwards normal ${({ animation }) => animation},
+  .6s ease ${({ autoClose }) => autoClose}ms forwards alternate-reverse ${({ animation }) => animation};
 }
 `;
 

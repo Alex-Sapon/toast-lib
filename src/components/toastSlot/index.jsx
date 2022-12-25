@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-import { Toast } from 'components/toast';
-import { SlotContainer } from 'components/toastSlot/styles';
-import { coordinates } from 'styles/coordinates';
+import { Toast } from '@/components/toast';
+import { SlotContainer } from './styles';
+import { coordinates } from '@/styles/coordinates';
 
 export const ToastSlot = memo(({ toasts, distance, animationName }) => {
   if (!toasts.length) return null;

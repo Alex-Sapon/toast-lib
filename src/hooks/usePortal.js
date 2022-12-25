@@ -7,8 +7,8 @@ export const usePortal = () => {
     const portal = document.createElement('div');
     portal.setAttribute('id', 'toast-portal');
     document.body.appendChild(portal);
-
     setLoaded(true);
+
     return () => portal.remove();
   }, []);
 

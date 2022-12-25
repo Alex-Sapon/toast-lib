@@ -1,4 +1,4 @@
-import { bounce, bounceUp, fade, flip, wobble } from 'styles/animation';
+import { bounce, bounceUp, fade, flip, wobble } from '@/styles/animation';
 
 export const getAnimation = (position, type) => {
   switch(type) {

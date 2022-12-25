@@ -7,7 +7,6 @@ export const useDraggable = (element, remove) => {
 
   useEffect(() => {
     const elem = element.current;
-
     elem.addEventListener('mousedown', handleMouseDown);
 
     function handleMouseDown(event) {
@@ -20,7 +19,7 @@ export const useDraggable = (element, remove) => {
           pageX: currentPageX,
           opacity: Number((1 - Math.abs(currentPageX / 200)).toFixed(2)),
         });
-      };
+      }
 
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', () => {
@@ -29,7 +28,7 @@ export const useDraggable = (element, remove) => {
         },
         { once: true },
       );
-    };
+    }
 
     return () => elem.removeEventListener('mousedown', handleMouseDown);
   }, [element]);

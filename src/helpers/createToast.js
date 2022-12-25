@@ -1,9 +1,9 @@
 import { v1 } from 'uuid';
 
-import error from 'assets/icons/error.svg';
-import info from 'assets/icons/info.svg';
-import success from 'assets/icons/success.svg';
-import warning from 'assets/icons/warning.svg';
+import error from '@/assets/icons/error.svg';
+import info from '@/assets/icons/info.svg';
+import success from '@/assets/icons/success.svg';
+import warning from '@/assets/icons/warning.svg';
 
 export const createToast = (message, options, type) => {
   const { color, backgroundColor, autoClose, position } = options;

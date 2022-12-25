@@ -6,6 +6,9 @@
   "module": "dist/index.es.js",
   "author": "Aleksandr Saponchik",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "prop-types": "^15.8.1",
     "styled-components": "^5.3.6",

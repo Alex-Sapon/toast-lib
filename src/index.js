@@ -1,7 +1,7 @@
-import { ToastContainer } from 'components';
-import { useToast } from 'hooks/useToast';
+import { ToastContainer } from '@/components';
+import { useToast } from '@/hooks';
 
-export default {
+export {
   ToastContainer,
   useToast,
 };

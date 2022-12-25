@@ -1,7 +1,6 @@
 import React from 'react';
 
-import ToastContainer from 'components/toastContainer';
-import { useToast } from 'hooks/useToast';
+import { ToastContainer, useToast } from '../';
 
 const styles = {
   border: 'none',
@@ -23,7 +22,7 @@ export default {
   component: ToastContainer,
   argTypes: {
     title: 'Info',
-    description: 'Example info description',
+    message: 'Example info description',
     type: {
       control: { type: 'radio' },
       options: ['success', 'info', 'warning', 'error'],
@@ -51,7 +50,7 @@ export default {
     },
     distance: {
       control: { type: 'select' },
-      options: [5, 10, 15, 20, 25, 30],
+      options: [10, 15, 20, 25, 30],
     },
 
   },
@@ -70,7 +69,7 @@ const Template = args => {
     distance,
   } = args;
 
-  const { toaster } = useToast(); // default - amountToasts = 3
+  const { toaster } = useToast();
 
   const handleClick = () => {
     toaster[type](message, {
