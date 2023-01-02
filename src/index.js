@@ -1,7 +1,4 @@
 import { ToastContainer } from '@/components';
 import { useToast } from '@/hooks';
 
-export {
-  ToastContainer,
-  useToast,
-};
+export { ToastContainer, useToast };

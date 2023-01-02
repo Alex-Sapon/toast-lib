@@ -14,15 +14,10 @@ module.exports = {
   webpackFinal: async (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname, '../', 'src'),
-      '@/assets': path.resolve(__dirname, '../', 'src/assets'),
-      '@/components': path.resolve(__dirname, '../', 'src/components'),
-      '@/constants': path.resolve(__dirname, '../', 'src/constants'),
-      '@/helpers': path.resolve(__dirname, '../', 'src/helpers'),
-      '@/utils': path.resolve(__dirname, '../', 'src/utils'),
-      '@/styles': path.resolve(__dirname, '../', 'src/styles'),
-      '@/hooks': path.resolve(__dirname, '../', 'src/hooks'),
+      '@': path.resolve(__dirname, "../src"),
+      '@/stories/*': path.resolve(__dirname, "../src/stories/*"),
     };
+
     return config;
-  },
+  }
 };

@@ -1,9 +1,6 @@
 import { v1 } from 'uuid';
 
-import error from '@/assets/icons/error.svg';
-import info from '@/assets/icons/info.svg';
-import success from '@/assets/icons/success.svg';
-import warning from '@/assets/icons/warning.svg';
+import { info, success, error, warning } from '@/assets/icons';
 
 export const createToast = (message, options, type) => {
   const { color, backgroundColor, autoClose, position } = options;
@@ -18,7 +15,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#9A40D3',
         icon: info,
         autoClose,
-        position,
+        position
       };
     case 'warning':
       return {
@@ -29,7 +26,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#E25837',
         icon: warning,
         autoClose,
-        position,
+        position
       };
     case 'error':
       return {
@@ -40,7 +37,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#F4E048',
         icon: error,
         autoClose,
-        position,
+        position
       };
     case 'success':
       return {
@@ -51,9 +48,9 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#37E29A',
         icon: success,
         autoClose,
-        position,
+        position
       };
     default:
-      
+
   }
 };

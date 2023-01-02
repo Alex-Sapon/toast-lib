@@ -5,18 +5,18 @@ import terser from '@rollup/plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import alias from '@rollup/plugin-alias';
 
-import packageJson from './package.json' assert { type: 'json' };
-
 export default {
   input: './src/index.js',
   output: [
     {
       file: 'dist/index.js',
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     {
       file: 'dist/index.es.js',
       format: 'es',
+      sourcemap: true
     }
   ],
   plugins: [
@@ -27,21 +27,11 @@ export default {
     }),
     resolve(),
     alias({
-      resolve: ['*', '.js', '.jsx'],
-      entries: [
-        { find: '@/components', replacement: 'src/components' },
-        { find: '@/utils', replacement: 'src/utils' },
-        { find: '@/styles', replacement: 'src/styles' },
-        { find: '@/assets', replacement: 'src/assets' },
-        { find: '@/hooks', replacement: 'src/hooks' },
-        { find: '@/helpers', replacement: 'src/helpers' },
-        { find: '@/constants', replacement: 'src/constants' }
-      ]
+      resolve: ['.js', '.jsx'],
     }),
     commonjs(),
     external(),
     terser()
   ],
-  external: Object.keys(packageJson.peerDependencies || {}),
-  globals: { 'styled-components': 'styled' }
+  external: ["react", "react-dom", "styled-components"]
 };

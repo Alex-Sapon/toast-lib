@@ -2,7 +2,7 @@ import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-import close from '@/assets/close.svg';
+import { close } from '@/assets/icons';
 import {
   Container,
   Description,
@@ -11,10 +11,10 @@ import {
   Title,
   ProgressBar,
   CloseButton,
-  CloseImg,
+  CloseImg
 } from '@/components/toast/styles';
-import { useDraggable } from '@/hooks';
 import { getAnimation } from '@/helpers';
+import { useDraggable } from '@/hooks';
 
 export const Toast = memo(props => {
   const {
@@ -54,7 +54,7 @@ export const Toast = memo(props => {
         <Description>{message}</Description>
       </TextWrapper>
       <CloseButton onClick={handleClose}>
-        <CloseImg src={close}/>
+        <CloseImg src={close} />
       </CloseButton>
       <ProgressBar autoClose={autoClose} />
     </Container>

@@ -9,12 +9,10 @@
       "@/constants/*": ["./src/constants/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/helpers/*": ["./src/helpers/*"],
-      "@/styles": ["./src/styles"],
+      "@/styles/*": ["./src/styles/*"],
       "@/utils/*": ["./src/utils/*"]
-    },
-    "module": "commonjs"
+    }
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", "*.stories.jsx"],
+  "exclude": ["node_modules"]
 }

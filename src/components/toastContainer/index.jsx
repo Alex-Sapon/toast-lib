@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-import { ToastSlot } from '@/components/toastSlot';
+import { ToastSlot, ErrorBoundary } from '@/components';
 import { POSITIONS } from '@/constants/positions';
 import { usePortal } from '@/hooks';
 import { GlobalStyles } from '@/styles/global';
@@ -15,7 +15,7 @@ export const ToastContainer = ({ distance, animationName }) => {
   const { loaded } = usePortal();
 
   const slots = POSITIONS.map(position =>
-    toasts.filter(toast => toast.position === position),
+    toasts.filter(toast => toast.position === position)
   );
 
   useEffect(() => {
@@ -24,26 +24,26 @@ export const ToastContainer = ({ distance, animationName }) => {
 
   return loaded
     ? ReactDOM.createPortal(
-      <React.Fragment>
+      <ErrorBoundary>
         {slots.map((slot, i) =>
           <ToastSlot
             key={POSITIONS[i]}
             toasts={slot}
             distance={distance}
             animationName={animationName}
-          />,
-          )}
+          />
+        )}
         <GlobalStyles />
-      </React.Fragment>,
+      </ErrorBoundary>,
       document.getElementById('toast-portal'))
     : null;
 };
 
 ToastContainer.defaultProps = {
-  distance: 15,
+  distance: 15
 };
 
 ToastContainer.propsType = {
-  animationName: PropTypes.string,
   distance: PropTypes.number,
+  animationName: PropTypes.string
 };

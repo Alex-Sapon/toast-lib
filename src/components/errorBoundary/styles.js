@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const ErrorContainer = styled.div`
-  
+export const ErrorText = styled.h2`
+  text-align: center;
 `;

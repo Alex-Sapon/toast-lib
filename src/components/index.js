@@ -1,3 +1,4 @@
-export { ToastContainer } from '@/components/toastContainer';
-export { ToastSlot } from '@/components/toastSlot';
-export { Toast } from '@/components/toast';
+export { ToastContainer } from './toastContainer';
+export { ToastSlot } from './toastSlot';
+export { Toast } from './toast';
+export { ErrorBoundary } from './errorBoundary';

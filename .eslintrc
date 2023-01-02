@@ -29,6 +29,7 @@
     "consistent-return": "off",
     "func-names": ["error", "never"],
     "no-use-before-define": ["error", { "functions": false }],
+    "import/no-unresolved": [2, { "caseSensitive": false }],
     "import/order": [
       "error",
       {
@@ -80,9 +81,17 @@
   },
   "settings": {
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx"],
-        "moduleDirectory": ["node_modules", "src/"]
+      "alias": {
+        "map": [
+          ["@/assets", "./src/assets"],
+          ["@/components", "./src/components"],
+          ["@/constants", "./src/constants"],
+          ["@/helpers", "./src/helpers"],
+          ["@/hooks", "./src/hooks"],
+          ["@/styles", "./src/styles"],
+          ["@/utils", "./src/utils"]
+        ],
+        "extensions": [".mjs", ".js", ".jsx", ".json", ".node"]
       }
     }
   }
