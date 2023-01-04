@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Toast component 1`] = `
+<div>
+  <div
+    class="sc-gswNZR hFUYdi"
+    style="transform: translateX(0px)false;"
+  >
+    <div
+      class="sc-dkrFOg kCYMOK"
+    />
+    <div
+      class="sc-hLBbgP"
+    >
+      <div
+        class="sc-eDvSVe eIhXbY"
+      >
+        Success
+      </div>
+      <div
+        class="sc-jSUZER ccLvKR"
+      >
+        Test success message
+      </div>
+    </div>
+    <button
+      class="sc-gKPRtg eaYjm"
+    >
+      <img
+        class="sc-iBYQkv gVqbcP"
+        src=""
+      />
+    </button>
+    <div
+      class="sc-ftTHYK eAhpLH"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders the ToastContainer component 1`] = `<div />`;
