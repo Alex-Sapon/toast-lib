@@ -27,11 +27,11 @@ export default {
     }),
     resolve(),
     alias({
-      resolve: ['.js', '.jsx'],
+      resolve: ['.js', '.jsx']
     }),
     commonjs(),
     external(),
     terser()
   ],
-  external: ["react", "react-dom", "styled-components"]
+  external: ['react', 'react-dom', 'styled-components']
 };

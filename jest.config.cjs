@@ -1,5 +1,5 @@
 module.exports = {
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'jsx', 'json'],
   transform: {
     '.+\\.(css|styl|less|sass|scss|png|jpg|svg|ttf|woff|woff2)$': 'jest-transform-stub',
@@ -11,5 +11,7 @@ module.exports = {
   testMatch: [
     '<rootDir>/src(/__tests__/*.(js|jsx|ts|tsx))'
   ],
-  transformIgnorePatterns: ['<rootDir>/node_modules/']
+  transformIgnorePatterns: [
+    '<rootDir>/node_modules/'
+  ]
 };
