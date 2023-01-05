@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   stories: [
     "../src/**/*.stories.mdx",
@@ -11,13 +9,4 @@ module.exports = {
     "@storybook/addon-interactions"
   ],
   framework: "@storybook/react",
-  webpackFinal: async (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': path.resolve(__dirname, "../src"),
-      '@/stories/*': path.resolve(__dirname, "../src/stories/*"),
-    };
-
-    return config;
-  }
 };

@@ -15,7 +15,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#9A40D3',
         icon: info,
         autoClose,
-        position
+        position,
       };
     case 'warning':
       return {
@@ -26,7 +26,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#E25837',
         icon: warning,
         autoClose,
-        position
+        position,
       };
     case 'error':
       return {
@@ -37,7 +37,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#F4E048',
         icon: error,
         autoClose,
-        position
+        position,
       };
     case 'success':
       return {
@@ -48,7 +48,7 @@ export const createToast = (message, options, type) => {
         backgroundColor: backgroundColor || '#37E29A',
         icon: success,
         autoClose,
-        position
+        position,
       };
     default:
 

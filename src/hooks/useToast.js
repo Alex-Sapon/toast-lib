@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { createToast } from '@/helpers';
 import { ToastFactory } from '@/utils/toastFactory';

@@ -2,7 +2,6 @@ import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-import { close } from '@/assets/icons';
 import {
   Container,
   Description,
@@ -10,8 +9,7 @@ import {
   TextWrapper,
   Title,
   ProgressBar,
-  CloseButton,
-  CloseImg
+  Close,
 } from '@/components/toast/styles';
 import { getAnimation } from '@/helpers';
 import { useDraggable } from '@/hooks';
@@ -20,6 +18,8 @@ export const Toast = memo(props => {
   const {
     id, title, message, autoClose, remove, position, animationName, ...restStyles
   } = props;
+
+  const { color } = restStyles;
 
   const [finallyAnimation, setFinallyAnimation] = useState(false);
   const element = useRef();
@@ -53,9 +53,7 @@ export const Toast = memo(props => {
         <Title>{title}</Title>
         <Description>{message}</Description>
       </TextWrapper>
-      <CloseButton onClick={handleClose}>
-        <CloseImg src={close} />
-      </CloseButton>
+      <Close onClick={handleClose} color={color}/>
       <ProgressBar autoClose={autoClose} />
     </Container>
   );
@@ -70,5 +68,5 @@ Toast.propsType = {
   position: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
+  icon: PropTypes.string.isRequired,
 };

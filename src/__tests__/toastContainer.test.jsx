@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { render, renderHook } from '@testing-library/react';
-import { Toast, ToastContainer } from '@/components';
+
+import { Toast } from '@/components';
+import { ToastContainer } from '@/components/toastContainer';
 import { useToast } from '@/hooks';
 
 it('render empty the ToastContainer component', () => {
@@ -27,7 +30,7 @@ it('renders the Toast component', () => {
       color=""
       backgroundColor=""
       icon=""
-    />
+    />,
   );
 
   expect(container).toMatchSnapshot();

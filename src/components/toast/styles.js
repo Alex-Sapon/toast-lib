@@ -39,7 +39,7 @@ export const Description = styled.div`
   font-size: 1.6rem
 `;
 
-export const CloseButton = styled.button`
+export const Close = styled.button`
   border: none;
   outline: none;
   padding: 0;
@@ -47,13 +47,17 @@ export const CloseButton = styled.button`
   width: 100%;
   height: 20px;
   align-self: flex-start;
-`;
+  position: relative;
 
-export const CloseImg = styled.img`
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin-top: 5px;
+  &::before {
+    content: '✖';
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: ${props => props.color};
+  }
 `;
 
 export const ProgressBar = styled.div`

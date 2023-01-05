@@ -1,4 +1,2 @@
-export { ToastContainer } from './toastContainer';
-export { ToastSlot } from './toastSlot';
-export { Toast } from './toast';
-export { ErrorBoundary } from './errorBoundary';
+export { Toast } from '@/components/toast';
+export { ErrorBoundary } from '@/components/errorBoundary';

@@ -14,7 +14,7 @@ const styles = {
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
 };
 
 export default {
@@ -25,7 +25,7 @@ export default {
     message: 'Example info description',
     type: {
       control: { type: 'radio' },
-      options: ['success', 'info', 'warning', 'error']
+      options: ['success', 'info', 'warning', 'error'],
     },
     position: {
       control: { type: 'select' },
@@ -35,25 +35,25 @@ export default {
         'bottom-middle',
         'top-right',
         'top-left',
-        'top-middle'
-      ]
+        'top-middle',
+      ],
     },
     animationName: {
       control: { type: 'select' },
-      options: ['bounceUp', 'wobble', 'bounce', 'fade', 'flip']
+      options: ['bounceUp', 'wobble', 'bounce', 'fade', 'flip'],
     },
     color: {
-      control: { type: 'color' }
+      control: { type: 'color' },
     },
     backgroundColor: {
-      control: { type: 'color' }
+      control: { type: 'color' },
     },
     distance: {
       control: { type: 'select' },
-      options: [10, 15, 20, 25, 30]
-    }
+      options: [10, 15, 20, 25, 30],
+    },
 
-  }
+  },
 };
 
 const Template = args => {
@@ -66,7 +66,7 @@ const Template = args => {
     autoClose,
     position,
     animationName,
-    distance
+    distance,
   } = args;
 
   const { toaster } = useToast();
@@ -77,7 +77,7 @@ const Template = args => {
       autoClose,
       position,
       color,
-      backgroundColor
+      backgroundColor,
     });
   };
 
@@ -88,7 +88,6 @@ const Template = args => {
         onClick={handleClick}
         type="button"
         style={styles}
-        data-cy="button"
       >
         Add toast
       </button>
@@ -107,5 +106,5 @@ ToastExample.args = {
   autoClose: 3000,
   position: 'bottom-left',
   animationName: 'bounce',
-  distance: 15
+  distance: 15,
 };
