@@ -44,7 +44,7 @@ $ yarn add react-toast-library
 
 ## Documentation
 
-###useToast
+### useToast
 
 - besides the ***message***, you can set ***title***;
 - ***autoClose***: you must specify the delay in milliseconds, default delay - 3000ms;
@@ -52,7 +52,7 @@ $ yarn add react-toast-library
   position - bottom-left;
 - and you can also set the ***color*** of the text and ***backgroundColor***.
 
-###ToastContainer
+### ToastContainer
 
 - ***distance***: specify the distance between messages in pixels, default 15px;
 - ***animation*** has 5 values: wobble, bounce, fade, flip and default - bounceUp.
