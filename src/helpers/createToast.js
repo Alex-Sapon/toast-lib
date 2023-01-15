@@ -3,13 +3,13 @@ import { v1 } from 'uuid';
 import { info, success, error, warning } from '@/assets/icons';
 
 export const createToast = (message, options, type) => {
-  const { color, backgroundColor, autoClose, position } = options;
+  const { title, color, backgroundColor, autoClose, position } = options;
 
   switch (type) {
     case 'info':
       return {
         id: v1(),
-        title: 'Info',
+        title: title || 'Info',
         message,
         color: color || '#fff',
         backgroundColor: backgroundColor || '#9A40D3',
@@ -20,7 +20,7 @@ export const createToast = (message, options, type) => {
     case 'warning':
       return {
         id: v1(),
-        title: 'Warning',
+        title: title || 'Warning',
         message,
         color: color || '#fff',
         backgroundColor: backgroundColor || '#E25837',
@@ -31,7 +31,7 @@ export const createToast = (message, options, type) => {
     case 'error':
       return {
         id: v1(),
-        title: 'Error',
+        title: title || 'Error',
         message,
         color: color || '#2E2834',
         backgroundColor: backgroundColor || '#F4E048',
@@ -42,7 +42,7 @@ export const createToast = (message, options, type) => {
     case 'success':
       return {
         id: v1(),
-        title: 'Success',
+        title: title || 'Success',
         message,
         color: color || '#fff',
         backgroundColor: backgroundColor || '#37E29A',
@@ -51,6 +51,5 @@ export const createToast = (message, options, type) => {
         position,
       };
     default:
-
   }
 };

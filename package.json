@@ -1,5 +1,5 @@
 {
-  "name": "toast-lib",
+  "name": "react-toast-library",
   "version": "1.0.0",
   "description": "Toast library",
   "main": "dist/index.js",
@@ -10,6 +10,9 @@
     "dist"
   ],
   "license": "ISC",
+  "dependencies": {
+    "uuid": "^3.4.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/eslint-parser": "^7.19.1",
