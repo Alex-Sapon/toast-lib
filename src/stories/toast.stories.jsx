@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { ToastContainer, useToast } from '..';
+import { ToastContainer } from '@/components/toastContainer';
+import { useToast } from '@/hooks/useToast';
 
 const styles = {
   border: 'none',

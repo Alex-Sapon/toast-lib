@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 import { Toast } from '@/components/toast';
-import { SlotContainer } from '@/components/toastSlot/styles';
+import { SlotContainer } from './styles';
 import { coordinates } from '@/styles/coordinates';
 
 export const ToastSlot = memo(({ toasts, distance, animationName }) => {
@@ -17,7 +17,7 @@ export const ToastSlot = memo(({ toasts, distance, animationName }) => {
           {...toast}
           key={toast.id}
           animationName={animationName}
-        />,
+        />
       )}
     </SlotContainer>
   );

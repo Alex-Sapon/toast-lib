@@ -4,7 +4,7 @@ import { render, renderHook } from '@testing-library/react';
 
 import { Toast } from '@/components';
 import { ToastContainer } from '@/components/toastContainer';
-import { useToast } from '@/hooks';
+import { useToast } from '@/hooks/useToast';
 
 it('render empty the ToastContainer component', () => {
   const { container } = render(<ToastContainer />);

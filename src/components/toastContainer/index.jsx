@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-import { ErrorBoundary } from '@/components/errorBoundary';
 import { ToastSlot } from '@/components/toastSlot';
+import { ErrorBoundary } from '@/components/errorBoundary';
 import { POSITIONS } from '@/constants/positions';
-import { usePortal } from '@/hooks';
+import { usePortal } from '@/hooks/usePortal';
 import { GlobalStyles } from '@/styles/global';
 import { ToastFactory } from '@/utils/toastFactory';
 

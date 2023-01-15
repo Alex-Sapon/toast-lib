@@ -10,9 +10,9 @@ import {
   Title,
   ProgressBar,
   Close,
-} from '@/components/toast/styles';
-import { getAnimation } from '@/helpers';
-import { useDraggable } from '@/hooks';
+} from './styles';
+import { getAnimation } from '@/helpers/getAnimation';
+import { useDraggable } from '@/hooks/useDraggable';
 
 export const Toast = memo(props => {
   const {

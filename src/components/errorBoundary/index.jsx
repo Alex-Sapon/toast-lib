@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ErrorText } from '@/components/errorBoundary/styles';
+import { ErrorText } from './styles';
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
