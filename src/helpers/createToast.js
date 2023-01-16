@@ -1,4 +1,4 @@
-import { v1 } from 'uuid';
+import { nanoid } from 'nanoid';
 
 import { info, success, error, warning } from '@/assets/icons';
 
@@ -8,7 +8,7 @@ export const createToast = (message, options, type) => {
   switch (type) {
     case 'info':
       return {
-        id: v1(),
+        id: nanoid(48),
         title: title || 'Info',
         message,
         color: color || '#fff',
@@ -19,7 +19,7 @@ export const createToast = (message, options, type) => {
       };
     case 'warning':
       return {
-        id: v1(),
+        id: nanoid(48),
         title: title || 'Warning',
         message,
         color: color || '#fff',
@@ -30,7 +30,7 @@ export const createToast = (message, options, type) => {
       };
     case 'error':
       return {
-        id: v1(),
+        id: nanoid(48),
         title: title || 'Error',
         message,
         color: color || '#2E2834',
@@ -41,7 +41,7 @@ export const createToast = (message, options, type) => {
       };
     case 'success':
       return {
-        id: v1(),
+        id: nanoid(48),
         title: title || 'Success',
         message,
         color: color || '#fff',

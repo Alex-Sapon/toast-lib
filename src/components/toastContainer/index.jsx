@@ -42,6 +42,7 @@ export const ToastContainer = ({ distance, animationName }) => {
 
 ToastContainer.defaultProps = {
   distance: 15,
+  animationName: 'bottom-left'
 };
 
 ToastContainer.propsType = {
