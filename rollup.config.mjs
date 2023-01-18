@@ -4,6 +4,8 @@ import external from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
+import image from '@rollup/plugin-image';
+import url from '@rollup/plugin-url';
 import svgr from '@svgr/rollup';
 
 import { fileURLToPath } from 'url';
@@ -22,22 +24,23 @@ export default {
     },
     {
       file: 'dist/index.es.js',
-      format: 'es',
-      exports: "named"
+      format: 'es'
     }
   ],
   plugins: [
     external(),
     resolve({ extensions: ['.mjs', '.js', '.jsx', '.json', '.node'] }),
     babel({
-      babelHelpers: 'runtime',
+      exclude: 'node_modules/**',
       plugins: ['@babel/plugin-transform-runtime'],
-      exclude: './node_modules/**',
-      presets: ['@babel/preset-react']
+      presets: ['@babel/preset-react'],
+      babelHelpers: 'runtime'
     }),
     commonjs(),
     terser(),
     svgr(),
+    url(),
+    image(),
     alias({
       entries: [
         {

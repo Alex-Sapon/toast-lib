@@ -1,41 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`render empty the ToastContainer component 1`] = `<div />`;
+
 exports[`renders the Toast component 1`] = `
 <div>
   <div
-    class="sc-gswNZR hFUYdi"
+    class="sc-bcXHqe iAzFDW"
     style="transform: translateX(0px)false;"
   >
     <div
-      class="sc-dkrFOg kCYMOK"
+      class="sc-gswNZR fMPuEA"
     />
     <div
-      class="sc-hLBbgP"
+      class="sc-dkrFOg"
     >
       <div
-        class="sc-eDvSVe eIhXbY"
+        class="sc-hLBbgP hUYuqY"
       >
         Success
       </div>
       <div
-        class="sc-jSUZER ccLvKR"
+        class="sc-eDvSVe coDoGD"
       >
         Test success message
       </div>
     </div>
     <button
-      class="sc-gKPRtg eaYjm"
-    >
-      <img
-        class="sc-iBYQkv gVqbcP"
-        src=""
-      />
-    </button>
+      class="sc-jSUZER egWHab"
+      color=""
+    />
     <div
-      class="sc-ftTHYK eAhpLH"
+      class="sc-gKPRtg dKfnqK"
     />
   </div>
 </div>
 `;
-
-exports[`renders the ToastContainer component 1`] = `<div />`;

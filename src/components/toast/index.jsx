@@ -9,7 +9,7 @@ import {
   TextWrapper,
   Title,
   ProgressBar,
-  Close,
+  Close
 } from './styles';
 import { getAnimation } from '@/helpers/getAnimation';
 import { useDraggable } from '@/hooks/useDraggable';
@@ -53,7 +53,7 @@ export const Toast = memo(props => {
         <Title>{title}</Title>
         <Description>{message}</Description>
       </TextWrapper>
-      <Close onClick={handleClose} color={color}/>
+      <Close onClick={handleClose} color={color} />
       <ProgressBar autoClose={autoClose} />
     </Container>
   );
@@ -68,5 +68,5 @@ Toast.propsType = {
   position: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
 };

@@ -1,6 +1,6 @@
 {
   "name": "simple-toast-library",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Toast library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -10,9 +10,6 @@
     "dist"
   ],
   "license": "ISC",
-  "dependencies": {
-    "nanoid": "^4.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/eslint-parser": "^7.19.1",
@@ -25,8 +22,10 @@
     "@rollup/plugin-alias": "^4.0.2",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-image": "^3.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.1.0",
+    "@rollup/plugin-url": "^8.0.1",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
@@ -59,18 +58,18 @@
     "nanoid": "^4.0.0",
     "prettier": "^2.8.0",
     "prop-types": "^15.8.1",
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "start-server-and-test": "^1.15.2",
     "styled-components": "^5.3.6"
   },
   "peerDependencies": {
+    "nanoid": "^4.0.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "styled-components": ">=5",
-    "nanoid": "^4.0.0"
+    "styled-components": ">=5"
   },
   "browser": {
     "crypto": false,

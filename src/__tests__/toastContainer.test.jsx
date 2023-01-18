@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render, renderHook } from '@testing-library/react';
 
-import { Toast } from '@/components';
+import { Toast } from '@/components/toast';
 import { ToastContainer } from '@/components/toastContainer';
 import { useToast } from '@/hooks/useToast';
 
