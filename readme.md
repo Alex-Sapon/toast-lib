@@ -1,17 +1,17 @@
-# react-toast-library
+# simple-toast-library
 
 ## Installation
 
 ```
-$ npm install --save react-toast-library
-$ yarn add react-toast-library
+$ npm install --save simple-toast-library
+$ yarn add simple-toast-library
 ```
 
 ## Example
 
 ```jsx
   import React from 'react';
-  import { ToastContainer, useToast } from 'react-toast-library';
+  import { ToastContainer, useToast } from 'simple-toast-library';
   
   function App(){
     const { toaster } = useToast(3);
